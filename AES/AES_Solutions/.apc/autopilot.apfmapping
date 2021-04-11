@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="aes.c" path="G:\AES\aes\aes.c"/>
+  </source>
+  <testbench>
+    <originFiles name="aes.c" path="G:\AES\aes\aes.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

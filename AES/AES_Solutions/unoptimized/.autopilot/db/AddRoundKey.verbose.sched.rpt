@@ -1,0 +1,209 @@
+
+
+================================================================
+== Vivado HLS Report for 'AddRoundKey'
+================================================================
+* Date:           Sat Apr 10 22:35:04 2021
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        AES_Solutions
+* Solution:       unoptimized
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     7.537|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   17|   17|   17|   17|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1  |   16|   16|         4|          -|          -|     4|    no    |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.76>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%n_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %n)" [aes/aes_func.c:512]   --->   Operation 6 'read' 'n_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%shl_ln536 = shl i32 %n_read, 2" [aes/aes_func.c:536]   --->   Operation 7 'shl' 'shl_ln536' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (1.76ns)   --->   "br label %1" [aes/aes_func.c:534]   --->   Operation 8 'br' <Predicate = true> <Delay = 1.76>
+
+State 2 <SV = 1> <Delay = 7.53>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%j_0 = phi i3 [ 0, %0 ], [ %j, %2 ]"   --->   Operation 9 'phi' 'j_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%zext_ln534 = zext i3 %j_0 to i32" [aes/aes_func.c:534]   --->   Operation 10 'zext' 'zext_ln534' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (1.13ns)   --->   "%icmp_ln534 = icmp eq i3 %j_0, -4" [aes/aes_func.c:534]   --->   Operation 11 'icmp' 'icmp_ln534' <Predicate = true> <Delay = 1.13> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)"   --->   Operation 12 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (1.65ns)   --->   "%j = add i3 %j_0, 1" [aes/aes_func.c:534]   --->   Operation 13 'add' 'j' <Predicate = true> <Delay = 1.65> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "br i1 %icmp_ln534, label %3, label %2" [aes/aes_func.c:534]   --->   Operation 14 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (2.55ns)   --->   "%add_ln536 = add nsw i32 %zext_ln534, %shl_ln536" [aes/aes_func.c:536]   --->   Operation 15 'add' 'add_ln536' <Predicate = (!icmp_ln534)> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%sext_ln536 = sext i32 %add_ln536 to i64" [aes/aes_func.c:536]   --->   Operation 16 'sext' 'sext_ln536' <Predicate = (!icmp_ln534)> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%trunc_ln536 = trunc i32 %add_ln536 to i10" [aes/aes_func.c:536]   --->   Operation 17 'trunc' 'trunc_ln536' <Predicate = (!icmp_ln534)> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%word_addr = getelementptr [480 x i32]* @word, i64 0, i64 %sext_ln536" [aes/aes_func.c:536]   --->   Operation 18 'getelementptr' 'word_addr' <Predicate = (!icmp_ln534)> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (1.73ns)   --->   "%add_ln537 = add i10 120, %trunc_ln536" [aes/aes_func.c:537]   --->   Operation 19 'add' 'add_ln537' <Predicate = (!icmp_ln534)> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%sext_ln537 = sext i10 %add_ln537 to i64" [aes/aes_func.c:537]   --->   Operation 20 'sext' 'sext_ln537' <Predicate = (!icmp_ln534)> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%word_addr_13 = getelementptr [480 x i32]* @word, i64 0, i64 %sext_ln537" [aes/aes_func.c:537]   --->   Operation 21 'getelementptr' 'word_addr_13' <Predicate = (!icmp_ln534)> <Delay = 0.00>
+ST_2 : Operation 22 [2/2] (3.25ns)   --->   "%word_load = load i32* %word_addr, align 4" [aes/aes_func.c:536]   --->   Operation 22 'load' 'word_load' <Predicate = (!icmp_ln534)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%trunc_ln536_1 = trunc i3 %j_0 to i2" [aes/aes_func.c:536]   --->   Operation 23 'trunc' 'trunc_ln536_1' <Predicate = (!icmp_ln534)> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%shl_ln = call i4 @_ssdm_op_BitConcatenate.i4.i2.i2(i2 %trunc_ln536_1, i2 0)" [aes/aes_func.c:536]   --->   Operation 24 'bitconcatenate' 'shl_ln' <Predicate = (!icmp_ln534)> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%zext_ln536 = zext i4 %shl_ln to i64" [aes/aes_func.c:536]   --->   Operation 25 'zext' 'zext_ln536' <Predicate = (!icmp_ln534)> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%statemt_addr = getelementptr [32 x i32]* %statemt, i64 0, i64 %zext_ln536" [aes/aes_func.c:536]   --->   Operation 26 'getelementptr' 'statemt_addr' <Predicate = (!icmp_ln534)> <Delay = 0.00>
+ST_2 : Operation 27 [2/2] (3.25ns)   --->   "%statemt_load = load i32* %statemt_addr, align 4" [aes/aes_func.c:536]   --->   Operation 27 'load' 'statemt_load' <Predicate = (!icmp_ln534)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_2 : Operation 28 [2/2] (3.25ns)   --->   "%word_load_8 = load i32* %word_addr_13, align 4" [aes/aes_func.c:537]   --->   Operation 28 'load' 'word_load_8' <Predicate = (!icmp_ln534)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%or_ln537 = or i4 %shl_ln, 1" [aes/aes_func.c:537]   --->   Operation 29 'or' 'or_ln537' <Predicate = (!icmp_ln534)> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%zext_ln537 = zext i4 %or_ln537 to i64" [aes/aes_func.c:537]   --->   Operation 30 'zext' 'zext_ln537' <Predicate = (!icmp_ln534)> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%statemt_addr_157 = getelementptr [32 x i32]* %statemt, i64 0, i64 %zext_ln537" [aes/aes_func.c:537]   --->   Operation 31 'getelementptr' 'statemt_addr_157' <Predicate = (!icmp_ln534)> <Delay = 0.00>
+ST_2 : Operation 32 [2/2] (3.25ns)   --->   "%statemt_load_153 = load i32* %statemt_addr_157, align 4" [aes/aes_func.c:537]   --->   Operation 32 'load' 'statemt_load_153' <Predicate = (!icmp_ln534)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "ret void"   --->   Operation 33 'ret' <Predicate = (icmp_ln534)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 4.98>
+ST_3 : Operation 34 [1/1] (1.73ns)   --->   "%add_ln538 = add i10 240, %trunc_ln536" [aes/aes_func.c:538]   --->   Operation 34 'add' 'add_ln538' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 35 [1/1] (0.00ns)   --->   "%sext_ln538 = sext i10 %add_ln538 to i64" [aes/aes_func.c:538]   --->   Operation 35 'sext' 'sext_ln538' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%word_addr_14 = getelementptr [480 x i32]* @word, i64 0, i64 %sext_ln538" [aes/aes_func.c:538]   --->   Operation 36 'getelementptr' 'word_addr_14' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 37 [1/1] (1.73ns)   --->   "%add_ln539 = add i10 360, %trunc_ln536" [aes/aes_func.c:539]   --->   Operation 37 'add' 'add_ln539' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 38 [1/1] (0.00ns)   --->   "%sext_ln539 = sext i10 %add_ln539 to i64" [aes/aes_func.c:539]   --->   Operation 38 'sext' 'sext_ln539' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%word_addr_15 = getelementptr [480 x i32]* @word, i64 0, i64 %sext_ln539" [aes/aes_func.c:539]   --->   Operation 39 'getelementptr' 'word_addr_15' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 40 [1/2] (3.25ns)   --->   "%word_load = load i32* %word_addr, align 4" [aes/aes_func.c:536]   --->   Operation 40 'load' 'word_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_3 : Operation 41 [1/2] (3.25ns)   --->   "%statemt_load = load i32* %statemt_addr, align 4" [aes/aes_func.c:536]   --->   Operation 41 'load' 'statemt_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_3 : Operation 42 [1/1] (0.99ns)   --->   "%xor_ln536 = xor i32 %statemt_load, %word_load" [aes/aes_func.c:536]   --->   Operation 42 'xor' 'xor_ln536' <Predicate = true> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 43 [1/2] (3.25ns)   --->   "%word_load_8 = load i32* %word_addr_13, align 4" [aes/aes_func.c:537]   --->   Operation 43 'load' 'word_load_8' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_3 : Operation 44 [1/2] (3.25ns)   --->   "%statemt_load_153 = load i32* %statemt_addr_157, align 4" [aes/aes_func.c:537]   --->   Operation 44 'load' 'statemt_load_153' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_3 : Operation 45 [1/1] (0.99ns)   --->   "%xor_ln537 = xor i32 %statemt_load_153, %word_load_8" [aes/aes_func.c:537]   --->   Operation 45 'xor' 'xor_ln537' <Predicate = true> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 46 [2/2] (3.25ns)   --->   "%word_load_9 = load i32* %word_addr_14, align 4" [aes/aes_func.c:538]   --->   Operation 46 'load' 'word_load_9' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_3 : Operation 47 [1/1] (0.00ns)   --->   "%or_ln538 = or i4 %shl_ln, 2" [aes/aes_func.c:538]   --->   Operation 47 'or' 'or_ln538' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 48 [1/1] (0.00ns)   --->   "%zext_ln538 = zext i4 %or_ln538 to i64" [aes/aes_func.c:538]   --->   Operation 48 'zext' 'zext_ln538' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 49 [1/1] (0.00ns)   --->   "%statemt_addr_158 = getelementptr [32 x i32]* %statemt, i64 0, i64 %zext_ln538" [aes/aes_func.c:538]   --->   Operation 49 'getelementptr' 'statemt_addr_158' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 50 [2/2] (3.25ns)   --->   "%statemt_load_154 = load i32* %statemt_addr_158, align 4" [aes/aes_func.c:538]   --->   Operation 50 'load' 'statemt_load_154' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_3 : Operation 51 [2/2] (3.25ns)   --->   "%word_load_10 = load i32* %word_addr_15, align 4" [aes/aes_func.c:539]   --->   Operation 51 'load' 'word_load_10' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_3 : Operation 52 [1/1] (0.00ns)   --->   "%or_ln539 = or i4 %shl_ln, 3" [aes/aes_func.c:539]   --->   Operation 52 'or' 'or_ln539' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 53 [1/1] (0.00ns)   --->   "%zext_ln539 = zext i4 %or_ln539 to i64" [aes/aes_func.c:539]   --->   Operation 53 'zext' 'zext_ln539' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 54 [1/1] (0.00ns)   --->   "%statemt_addr_159 = getelementptr [32 x i32]* %statemt, i64 0, i64 %zext_ln539" [aes/aes_func.c:539]   --->   Operation 54 'getelementptr' 'statemt_addr_159' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 55 [2/2] (3.25ns)   --->   "%statemt_load_155 = load i32* %statemt_addr_159, align 4" [aes/aes_func.c:539]   --->   Operation 55 'load' 'statemt_load_155' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+
+State 4 <SV = 3> <Delay = 4.24>
+ST_4 : Operation 56 [1/1] (3.25ns)   --->   "store i32 %xor_ln536, i32* %statemt_addr, align 4" [aes/aes_func.c:536]   --->   Operation 56 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_4 : Operation 57 [1/1] (3.25ns)   --->   "store i32 %xor_ln537, i32* %statemt_addr_157, align 4" [aes/aes_func.c:537]   --->   Operation 57 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_4 : Operation 58 [1/2] (3.25ns)   --->   "%word_load_9 = load i32* %word_addr_14, align 4" [aes/aes_func.c:538]   --->   Operation 58 'load' 'word_load_9' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_4 : Operation 59 [1/2] (3.25ns)   --->   "%statemt_load_154 = load i32* %statemt_addr_158, align 4" [aes/aes_func.c:538]   --->   Operation 59 'load' 'statemt_load_154' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_4 : Operation 60 [1/1] (0.99ns)   --->   "%xor_ln538 = xor i32 %statemt_load_154, %word_load_9" [aes/aes_func.c:538]   --->   Operation 60 'xor' 'xor_ln538' <Predicate = true> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 61 [1/2] (3.25ns)   --->   "%word_load_10 = load i32* %word_addr_15, align 4" [aes/aes_func.c:539]   --->   Operation 61 'load' 'word_load_10' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_4 : Operation 62 [1/2] (3.25ns)   --->   "%statemt_load_155 = load i32* %statemt_addr_159, align 4" [aes/aes_func.c:539]   --->   Operation 62 'load' 'statemt_load_155' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_4 : Operation 63 [1/1] (0.99ns)   --->   "%xor_ln539 = xor i32 %statemt_load_155, %word_load_10" [aes/aes_func.c:539]   --->   Operation 63 'xor' 'xor_ln539' <Predicate = true> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 3.25>
+ST_5 : Operation 64 [1/1] (3.25ns)   --->   "store i32 %xor_ln538, i32* %statemt_addr_158, align 4" [aes/aes_func.c:538]   --->   Operation 64 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_5 : Operation 65 [1/1] (3.25ns)   --->   "store i32 %xor_ln539, i32* %statemt_addr_159, align 4" [aes/aes_func.c:539]   --->   Operation 65 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_5 : Operation 66 [1/1] (0.00ns)   --->   "br label %1" [aes/aes_func.c:534]   --->   Operation 66 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('j') with incoming values : ('j', aes/aes_func.c:534) [8]  (1.77 ns)
+
+ <State 2>: 7.54ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', aes/aes_func.c:534) [8]  (0 ns)
+	'add' operation ('add_ln536', aes/aes_func.c:536) [15]  (2.55 ns)
+	'add' operation ('add_ln537', aes/aes_func.c:537) [19]  (1.73 ns)
+	'getelementptr' operation ('word_addr_13', aes/aes_func.c:537) [21]  (0 ns)
+	'load' operation ('word_load_8', aes/aes_func.c:537) on array 'word' [36]  (3.25 ns)
+
+ <State 3>: 4.98ns
+The critical path consists of the following:
+	'add' operation ('add_ln538', aes/aes_func.c:538) [22]  (1.73 ns)
+	'getelementptr' operation ('word_addr_14', aes/aes_func.c:538) [24]  (0 ns)
+	'load' operation ('word_load_9', aes/aes_func.c:538) on array 'word' [43]  (3.25 ns)
+
+ <State 4>: 4.25ns
+The critical path consists of the following:
+	'load' operation ('word_load_9', aes/aes_func.c:538) on array 'word' [43]  (3.25 ns)
+	'xor' operation ('xor_ln538', aes/aes_func.c:538) [48]  (0.993 ns)
+
+ <State 5>: 3.25ns
+The critical path consists of the following:
+	'store' operation ('store_ln538', aes/aes_func.c:538) of variable 'xor_ln538', aes/aes_func.c:538 on array 'statemt' [49]  (3.25 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

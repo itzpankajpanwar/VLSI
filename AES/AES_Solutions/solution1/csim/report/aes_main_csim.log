@@ -1,0 +1,14 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../../aes/aes.c in debug mode
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Pankaj' on host 'desktop-rcttvme' (Windows NT_amd64 version 6.2) on Sun Apr 11 00:45:52 +0530 2021
+INFO: [HLS 200-10] In directory 'G:/AES/AES_Solutions/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Generating csim.exe
+encrypted message 	3925841d02dc09fbdc118597196a0b32
+decrypto message	3243f6a8885a308d313198a2e0370734
+0
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

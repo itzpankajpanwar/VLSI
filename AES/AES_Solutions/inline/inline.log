@@ -1,0 +1,148 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'aes/aes.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 175.605 ; gain = 85.293
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 175.605 ; gain = 85.293
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'SubByte' into 'KeySchedule' (aes/aes_key.c:147).
+INFO: [XFORM 203-603] Inlining function 'SubByte' into 'KeySchedule' (aes/aes_key.c:148).
+INFO: [XFORM 203-603] Inlining function 'SubByte' into 'KeySchedule' (aes/aes_key.c:149).
+INFO: [XFORM 203-603] Inlining function 'SubByte' into 'KeySchedule' (aes/aes_key.c:150).
+INFO: [XFORM 203-603] Inlining function 'KeySchedule' into 'encrypt' (aes/aes_enc.c:77).
+INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'encrypt' (aes/aes_enc.c:108).
+INFO: [XFORM 203-603] Inlining function 'ByteSub_ShiftRow' into 'encrypt' (aes/aes_enc.c:113).
+INFO: [XFORM 203-603] Inlining function 'MixColumn_AddRoundKey' into 'encrypt' (aes/aes_enc.c:114).
+INFO: [XFORM 203-603] Inlining function 'ByteSub_ShiftRow' into 'encrypt' (aes/aes_enc.c:116).
+INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'encrypt' (aes/aes_enc.c:117).
+INFO: [XFORM 203-603] Inlining function 'KeySchedule' into 'decrypt' (aes/aes_dec.c:75).
+INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'decrypt' (aes/aes_dec.c:111).
+INFO: [XFORM 203-603] Inlining function 'InversShiftRow_ByteSub' into 'decrypt' (aes/aes_dec.c:113).
+INFO: [XFORM 203-603] Inlining function 'AddRoundKey_InversMixColumn' into 'decrypt' (aes/aes_dec.c:119).
+INFO: [XFORM 203-603] Inlining function 'InversShiftRow_ByteSub' into 'decrypt' (aes/aes_dec.c:120).
+INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'decrypt' (aes/aes_dec.c:123).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 175.605 ; gain = 85.293
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 175.605 ; gain = 85.293
+WARNING: [XFORM 203-561] Updating loop upper bound from 8 to 4 for loop 'Loop-0' (aes/aes_key.c:134:1) in function 'decrypt'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 116 to 40 for loop 'Loop-1' (aes/aes_key.c:143:1) in function 'decrypt'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 36 to 40 for loop 'Loop-1' (aes/aes_key.c:143:1) in function 'decrypt'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 8 to 4 for loop 'Loop-2' (aes/aes_func.c:562:1) in function 'decrypt'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 13 to 9 for loop 'Loop-3' (aes/aes_dec.c:118:1) in function 'decrypt'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 8 to 4 for loop 'Loop-4' (aes/aes_func.c:562:1) in function 'decrypt'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 32 to 16 for loop 'Loop-5' (aes/aes_dec.c:129:1) in function 'decrypt'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 8 to 4 for loop 'Loop-0' (aes/aes_key.c:134:1) in function 'encrypt'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 116 to 40 for loop 'Loop-1' (aes/aes_key.c:143:1) in function 'encrypt'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 36 to 40 for loop 'Loop-1' (aes/aes_key.c:143:1) in function 'encrypt'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 8 to 4 for loop 'Loop-2' (aes/aes_func.c:562:1) in function 'encrypt'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 8 to 4 for loop 'Loop-4' (aes/aes_func.c:562:1) in function 'encrypt'.
+INFO: [XFORM 203-102] Automatically partitioning small array 'temp' (aes/aes_key.c:81) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'temp' (aes/aes_key.c:81) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'temp' (aes/aes_key.c:81) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'temp' (aes/aes_key.c:81) in dimension 1 completely.
+WARNING: [XFORM 203-561] Updating loop upper bound from 8 to 4 for loop 'Loop-3-0' (aes/aes_func.c:381:1) in function 'encrypt'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 8 to 4 for loop 'Loop-3-1' (aes/aes_func.c:433:1) in function 'encrypt'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 32 to 16 for loop 'Loop-5' (aes/aes_enc.c:123:1) in function 'encrypt'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (aes/aes_func.c:382:2) to (aes/aes_func.c:378:23) in function 'encrypt'... converting 13 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'encrypt' (aes/aes_enc.c:64)...16 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'decrypt' (aes/aes_dec.c:63)...6 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 175.605 ; gain = 85.293
+WARNING: [XFORM 203-561] Updating loop upper bound from 8 to 7 for loop 'Loop-3-0' (aes/aes_func.c:455:1) in function 'decrypt'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 8 to 7 for loop 'Loop-3-1' (aes/aes_func.c:463:1) in function 'decrypt'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 8 to 7 for loop 'Loop-3-2' (aes/aes_func.c:522:1) in function 'decrypt'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 13 to 9 for loop 'Loop-3' (aes/aes_enc.c:112:1) in function 'encrypt'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 7 to 4 for loop 'Loop-3-0' in function 'decrypt'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 7 to 4 for loop 'Loop-3-1' in function 'decrypt'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 7 to 4 for loop 'Loop-3-2' in function 'decrypt'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 175.605 ; gain = 85.293
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'aes_main' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'encrypt' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 9.805 seconds; current allocated memory: 124.602 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 10 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.366 seconds; current allocated memory: 126.720 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'decrypt' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.585 seconds; current allocated memory: 128.516 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.399 seconds; current allocated memory: 130.651 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes_main' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.441 seconds; current allocated memory: 130.931 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 131.204 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'encrypt' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'encrypt_out_enc_statemt' to 'encrypt_out_enc_sbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'aes_main_mux_42_32_1_1' to 'aes_main_mux_42_3cud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'aes_main_mux_42_3cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'encrypt'.
+INFO: [HLS 200-111]  Elapsed time: 0.373 seconds; current allocated memory: 134.428 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'decrypt' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'decrypt_out_dec_statemt' to 'decrypt_out_dec_sdEe' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'aes_main_mux_42_3cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'decrypt'.
+INFO: [HLS 200-111]  Elapsed time: 0.894 seconds; current allocated memory: 138.680 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes_main' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on function 'aes_main' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'main_result' is power-on initialization.
+WARNING: [RTGEN 206-101] Global array 'statemt' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'key' will not be exposed as RTL port.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes_main'.
+INFO: [HLS 200-111]  Elapsed time: 0.913 seconds; current allocated memory: 140.035 MB.
+INFO: [RTMG 210-279] Implementing memory 'encrypt_Sbox_rom' using block ROMs.
+INFO: [RTMG 210-279] Implementing memory 'encrypt_Rcon0_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'encrypt_out_enc_sbkb_rom' using distributed ROMs.
+INFO: [RTMG 210-278] Implementing memory 'encrypt_ret_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-279] Implementing memory 'decrypt_invSbox_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'decrypt_out_dec_sdEe_rom' using distributed ROMs.
+INFO: [RTMG 210-278] Implementing memory 'decrypt_ret_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'aes_main_word_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'aes_main_statemt_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'aes_main_key_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 219.508 ; gain = 129.195
+INFO: [VHDL 208-304] Generating VHDL RTL for aes_main.
+INFO: [VLOG 209-307] Generating Verilog RTL for aes_main.
+INFO: [HLS 200-112] Total elapsed time: 15.541 seconds; peak allocated memory: 140.035 MB.

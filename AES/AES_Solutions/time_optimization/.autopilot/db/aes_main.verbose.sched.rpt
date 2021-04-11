@@ -1,0 +1,227 @@
+
+
+================================================================
+== Vivado HLS Report for 'aes_main'
+================================================================
+* Date:           Sun Apr 11 01:43:09 2021
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        AES_Solutions
+* Solution:       time_optimization
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.742|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+------+------+------+---------+
+    |   Latency   |   Interval  | Pipeline|
+    |  min |  max |  min |  max |   Type  |
+    +------+------+------+------+---------+
+    |  1322|  1402|  1322|  1402|   none  |
+    +------+------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 12
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.32>
+ST_1 : Operation 13 [1/1] (2.32ns)   --->   "store i32 43, i32* getelementptr inbounds ([16 x i32]* @key_0, i64 0, i64 0), align 16" [aes/aes.c:102]   --->   Operation 13 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_1 : Operation 14 [1/1] (2.32ns)   --->   "store i32 126, i32* getelementptr inbounds ([16 x i32]* @key_0, i64 0, i64 1), align 4" [aes/aes.c:103]   --->   Operation 14 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+
+State 2 <SV = 1> <Delay = 2.32>
+ST_2 : Operation 15 [1/1] (2.32ns)   --->   "store i32 21, i32* getelementptr inbounds ([16 x i32]* @key_0, i64 0, i64 2), align 8" [aes/aes.c:104]   --->   Operation 15 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_2 : Operation 16 [1/1] (2.32ns)   --->   "store i32 22, i32* getelementptr inbounds ([16 x i32]* @key_0, i64 0, i64 3), align 4" [aes/aes.c:105]   --->   Operation 16 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+
+State 3 <SV = 2> <Delay = 2.32>
+ST_3 : Operation 17 [1/1] (2.32ns)   --->   "store i32 40, i32* getelementptr inbounds ([16 x i32]* @key_0, i64 0, i64 4), align 16" [aes/aes.c:106]   --->   Operation 17 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_3 : Operation 18 [1/1] (2.32ns)   --->   "store i32 174, i32* getelementptr inbounds ([16 x i32]* @key_0, i64 0, i64 5), align 4" [aes/aes.c:107]   --->   Operation 18 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+
+State 4 <SV = 3> <Delay = 2.32>
+ST_4 : Operation 19 [1/1] (2.32ns)   --->   "store i32 210, i32* getelementptr inbounds ([16 x i32]* @key_0, i64 0, i64 6), align 8" [aes/aes.c:108]   --->   Operation 19 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_4 : Operation 20 [1/1] (2.32ns)   --->   "store i32 166, i32* getelementptr inbounds ([16 x i32]* @key_0, i64 0, i64 7), align 4" [aes/aes.c:109]   --->   Operation 20 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+
+State 5 <SV = 4> <Delay = 2.32>
+ST_5 : Operation 21 [1/1] (2.32ns)   --->   "store i32 50, i32* getelementptr inbounds ([16 x i32]* @statemt_0, i64 0, i64 0), align 16" [aes/aes.c:84]   --->   Operation 21 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_5 : Operation 22 [1/1] (2.32ns)   --->   "store i32 67, i32* getelementptr inbounds ([16 x i32]* @statemt_1, i64 0, i64 0), align 4" [aes/aes.c:85]   --->   Operation 22 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_5 : Operation 23 [1/1] (2.32ns)   --->   "store i32 246, i32* getelementptr inbounds ([16 x i32]* @statemt_0, i64 0, i64 1), align 8" [aes/aes.c:86]   --->   Operation 23 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_5 : Operation 24 [1/1] (2.32ns)   --->   "store i32 168, i32* getelementptr inbounds ([16 x i32]* @statemt_1, i64 0, i64 1), align 4" [aes/aes.c:87]   --->   Operation 24 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_5 : Operation 25 [1/1] (2.32ns)   --->   "store i32 171, i32* getelementptr inbounds ([16 x i32]* @key_0, i64 0, i64 8), align 16" [aes/aes.c:110]   --->   Operation 25 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_5 : Operation 26 [1/1] (2.32ns)   --->   "store i32 247, i32* getelementptr inbounds ([16 x i32]* @key_0, i64 0, i64 9), align 4" [aes/aes.c:111]   --->   Operation 26 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+
+State 6 <SV = 5> <Delay = 2.32>
+ST_6 : Operation 27 [1/1] (2.32ns)   --->   "store i32 136, i32* getelementptr inbounds ([16 x i32]* @statemt_0, i64 0, i64 2), align 16" [aes/aes.c:88]   --->   Operation 27 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_6 : Operation 28 [1/1] (2.32ns)   --->   "store i32 90, i32* getelementptr inbounds ([16 x i32]* @statemt_1, i64 0, i64 2), align 4" [aes/aes.c:89]   --->   Operation 28 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_6 : Operation 29 [1/1] (2.32ns)   --->   "store i32 48, i32* getelementptr inbounds ([16 x i32]* @statemt_0, i64 0, i64 3), align 8" [aes/aes.c:90]   --->   Operation 29 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_6 : Operation 30 [1/1] (2.32ns)   --->   "store i32 141, i32* getelementptr inbounds ([16 x i32]* @statemt_1, i64 0, i64 3), align 4" [aes/aes.c:91]   --->   Operation 30 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_6 : Operation 31 [1/1] (2.32ns)   --->   "store i32 21, i32* getelementptr inbounds ([16 x i32]* @key_0, i64 0, i64 10), align 8" [aes/aes.c:112]   --->   Operation 31 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_6 : Operation 32 [1/1] (2.32ns)   --->   "store i32 136, i32* getelementptr inbounds ([16 x i32]* @key_0, i64 0, i64 11), align 4" [aes/aes.c:113]   --->   Operation 32 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+
+State 7 <SV = 6> <Delay = 2.32>
+ST_7 : Operation 33 [1/1] (2.32ns)   --->   "store i32 49, i32* getelementptr inbounds ([16 x i32]* @statemt_0, i64 0, i64 4), align 16" [aes/aes.c:92]   --->   Operation 33 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_7 : Operation 34 [1/1] (2.32ns)   --->   "store i32 49, i32* getelementptr inbounds ([16 x i32]* @statemt_1, i64 0, i64 4), align 4" [aes/aes.c:93]   --->   Operation 34 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_7 : Operation 35 [1/1] (2.32ns)   --->   "store i32 152, i32* getelementptr inbounds ([16 x i32]* @statemt_0, i64 0, i64 5), align 8" [aes/aes.c:94]   --->   Operation 35 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_7 : Operation 36 [1/1] (2.32ns)   --->   "store i32 162, i32* getelementptr inbounds ([16 x i32]* @statemt_1, i64 0, i64 5), align 4" [aes/aes.c:95]   --->   Operation 36 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_7 : Operation 37 [1/1] (2.32ns)   --->   "store i32 9, i32* getelementptr inbounds ([16 x i32]* @key_0, i64 0, i64 12), align 16" [aes/aes.c:114]   --->   Operation 37 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_7 : Operation 38 [1/1] (2.32ns)   --->   "store i32 207, i32* getelementptr inbounds ([16 x i32]* @key_0, i64 0, i64 13), align 4" [aes/aes.c:115]   --->   Operation 38 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+
+State 8 <SV = 7> <Delay = 2.32>
+ST_8 : Operation 39 [1/1] (2.32ns)   --->   "store i32 224, i32* getelementptr inbounds ([16 x i32]* @statemt_0, i64 0, i64 6), align 16" [aes/aes.c:96]   --->   Operation 39 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_8 : Operation 40 [1/1] (2.32ns)   --->   "store i32 55, i32* getelementptr inbounds ([16 x i32]* @statemt_1, i64 0, i64 6), align 4" [aes/aes.c:97]   --->   Operation 40 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_8 : Operation 41 [1/1] (2.32ns)   --->   "store i32 7, i32* getelementptr inbounds ([16 x i32]* @statemt_0, i64 0, i64 7), align 8" [aes/aes.c:98]   --->   Operation 41 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_8 : Operation 42 [1/1] (2.32ns)   --->   "store i32 52, i32* getelementptr inbounds ([16 x i32]* @statemt_1, i64 0, i64 7), align 4" [aes/aes.c:99]   --->   Operation 42 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_8 : Operation 43 [1/1] (2.32ns)   --->   "store i32 79, i32* getelementptr inbounds ([16 x i32]* @key_0, i64 0, i64 14), align 8" [aes/aes.c:116]   --->   Operation 43 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_8 : Operation 44 [1/1] (2.32ns)   --->   "store i32 60, i32* getelementptr inbounds ([16 x i32]* @key_0, i64 0, i64 15), align 4" [aes/aes.c:117]   --->   Operation 44 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+
+State 9 <SV = 8> <Delay = 0.00>
+ST_9 : Operation 45 [2/2] (0.00ns)   --->   "call fastcc void @encrypt([16 x i32]* @statemt_0, [16 x i32]* @statemt_1, [16 x i32]* @key_0) nounwind" [aes/aes.c:119]   --->   Operation 45 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 0.00>
+ST_10 : Operation 46 [1/2] (0.00ns)   --->   "call fastcc void @encrypt([16 x i32]* @statemt_0, [16 x i32]* @statemt_1, [16 x i32]* @key_0) nounwind" [aes/aes.c:119]   --->   Operation 46 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 10> <Delay = 0.00>
+ST_11 : Operation 47 [2/2] (0.00ns)   --->   "call fastcc void @decrypt([16 x i32]* @statemt_0, [16 x i32]* @statemt_1, [16 x i32]* @key_0) nounwind" [aes/aes.c:120]   --->   Operation 47 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 12 <SV = 11> <Delay = 0.00>
+ST_12 : Operation 48 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 0) nounwind, !map !122"   --->   Operation 48 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 49 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([9 x i8]* @aes_main_str) nounwind"   --->   Operation 49 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 50 [1/2] (0.00ns)   --->   "call fastcc void @decrypt([16 x i32]* @statemt_0, [16 x i32]* @statemt_1, [16 x i32]* @key_0) nounwind" [aes/aes.c:120]   --->   Operation 50 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_12 : Operation 51 [1/1] (0.00ns)   --->   "ret i32 0" [aes/aes.c:121]   --->   Operation 51 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 2.32ns
+The critical path consists of the following:
+	'store' operation ('store_ln102', aes/aes.c:102) of constant 43 on array 'key_0' [30]  (2.32 ns)
+
+ <State 2>: 2.32ns
+The critical path consists of the following:
+	'store' operation ('store_ln104', aes/aes.c:104) of constant 21 on array 'key_0' [32]  (2.32 ns)
+
+ <State 3>: 2.32ns
+The critical path consists of the following:
+	'store' operation ('store_ln106', aes/aes.c:106) of constant 40 on array 'key_0' [34]  (2.32 ns)
+
+ <State 4>: 2.32ns
+The critical path consists of the following:
+	'store' operation ('store_ln108', aes/aes.c:108) of constant 210 on array 'key_0' [36]  (2.32 ns)
+
+ <State 5>: 2.32ns
+The critical path consists of the following:
+	'store' operation ('store_ln84', aes/aes.c:84) of constant 50 on array 'statemt_0' [14]  (2.32 ns)
+
+ <State 6>: 2.32ns
+The critical path consists of the following:
+	'store' operation ('store_ln88', aes/aes.c:88) of constant 136 on array 'statemt_0' [18]  (2.32 ns)
+
+ <State 7>: 2.32ns
+The critical path consists of the following:
+	'store' operation ('store_ln92', aes/aes.c:92) of constant 49 on array 'statemt_0' [22]  (2.32 ns)
+
+ <State 8>: 2.32ns
+The critical path consists of the following:
+	'store' operation ('store_ln96', aes/aes.c:96) of constant 224 on array 'statemt_0' [26]  (2.32 ns)
+
+ <State 9>: 0ns
+The critical path consists of the following:
+
+ <State 10>: 0ns
+The critical path consists of the following:
+
+ <State 11>: 0ns
+The critical path consists of the following:
+
+ <State 12>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

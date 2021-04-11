@@ -1,0 +1,191 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'aes/aes.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 174.891 ; gain = 84.535
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 174.891 ; gain = 84.535
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 174.891 ; gain = 84.535
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'SubByte' into 'KeySchedule' (aes/aes_key.c:144) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 174.891 ; gain = 84.535
+INFO: [XFORM 203-102] Automatically partitioning small array 'temp' (aes/aes_key.c:80) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'temp' (aes/aes_key.c:80) in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'SubByte' into 'KeySchedule' (aes/aes_key.c:144) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (aes/aes_func.c:374:7) to (aes/aes_func.c:372:23) in function 'MixColumn_AddRoundKey'... converting 13 basic blocks.
+INFO: [XFORM 203-602] Inlining function 'encrypt' into 'aes_main' (aes/aes.c:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'decrypt' into 'aes_main' (aes/aes.c:118) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'MixColumn_AddRoundKey' (aes/aes_func.c:367)...16 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'AddRoundKey_InversMixColumn' (aes/aes_func.c:434)...6 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 174.891 ; gain = 84.535
+WARNING: [XFORM 203-631] Renaming function 'MixColumn_AddRoundKey' to 'MixColumn_AddRoundKe' (aes/aes_func.c:369:23)
+WARNING: [XFORM 203-631] Renaming function 'InversShiftRow_ByteSub' to 'InversShiftRow_ByteS' (aes/aes_func.c:253:7)
+WARNING: [XFORM 203-631] Renaming function 'AddRoundKey_InversMixColumn' to 'AddRoundKey_InversMi' (aes/aes_func.c:436:23)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 210.836 ; gain = 120.480
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'aes_main' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'KeySchedule' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 8.469 seconds; current allocated memory: 161.320 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 4 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.144 seconds; current allocated memory: 162.017 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'AddRoundKey' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 162.214 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 162.381 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ByteSub_ShiftRow' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.208 seconds; current allocated memory: 163.497 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.314 seconds; current allocated memory: 164.843 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'MixColumn_AddRoundKe' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.365 seconds; current allocated memory: 165.315 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.113 seconds; current allocated memory: 165.769 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'InversShiftRow_ByteS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.266 seconds; current allocated memory: 166.931 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.317 seconds; current allocated memory: 168.277 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'AddRoundKey_InversMi' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.339 seconds; current allocated memory: 168.743 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.138 seconds; current allocated memory: 169.418 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes_main' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.208 seconds; current allocated memory: 169.794 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.355 seconds; current allocated memory: 170.408 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'KeySchedule' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'aes_main_mux_42_32_1_1' to 'aes_main_mux_42_3bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'aes_main_mux_42_3bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'KeySchedule'.
+INFO: [HLS 200-111]  Elapsed time: 0.291 seconds; current allocated memory: 171.594 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'AddRoundKey' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'AddRoundKey'.
+INFO: [HLS 200-111]  Elapsed time: 0.297 seconds; current allocated memory: 172.178 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ByteSub_ShiftRow' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'ByteSub_ShiftRow_Sbox' to 'ByteSub_ShiftRow_cud' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ByteSub_ShiftRow'.
+INFO: [HLS 200-111]  Elapsed time: 0.206 seconds; current allocated memory: 174.271 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'MixColumn_AddRoundKe' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'MixColumn_AddRoundKe_ret' to 'MixColumn_AddRoundEe' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'MixColumn_AddRoundKe'.
+INFO: [HLS 200-111]  Elapsed time: 0.522 seconds; current allocated memory: 175.215 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'InversShiftRow_ByteS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'InversShiftRow_ByteS_invSbox' to 'InversShiftRow_ByeOg' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'InversShiftRow_ByteS'.
+INFO: [HLS 200-111]  Elapsed time: 0.354 seconds; current allocated memory: 177.450 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'AddRoundKey_InversMi' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'AddRoundKey_InversMi_ret' to 'AddRoundKey_InverfYi' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'AddRoundKey_InversMi'.
+INFO: [HLS 200-111]  Elapsed time: 0.519 seconds; current allocated memory: 178.763 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes_main' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on function 'aes_main' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Global array 'key' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Register 'round_val' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'nb' is power-on initialization.
+WARNING: [RTGEN 206-101] Global scalar 'nb' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'statemt' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'aes_main_out_enc_statemt' to 'aes_main_out_enc_g8j' due to the length limit 20
+WARNING: [RTGEN 206-101] Register 'main_result' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'aes_main_out_dec_statemt' to 'aes_main_out_dec_hbi' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes_main'.
+INFO: [HLS 200-111]  Elapsed time: 0.476 seconds; current allocated memory: 180.249 MB.
+INFO: [RTMG 210-279] Implementing memory 'KeySchedule_Sbox_rom' using block ROMs.
+INFO: [RTMG 210-279] Implementing memory 'KeySchedule_Rcon0_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ByteSub_ShiftRow_cud_rom' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'MixColumn_AddRoundEe_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-279] Implementing memory 'InversShiftRow_ByeOg_rom' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'AddRoundKey_InverfYi_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'aes_main_word_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'aes_main_key_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'aes_main_statemt_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-279] Implementing memory 'aes_main_out_enc_g8j_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'aes_main_out_dec_hbi_rom' using distributed ROMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 263.781 ; gain = 173.426
+INFO: [VHDL 208-304] Generating VHDL RTL for aes_main.
+INFO: [VLOG 209-307] Generating Verilog RTL for aes_main.
+INFO: [HLS 200-112] Total elapsed time: 15.775 seconds; peak allocated memory: 180.249 MB.

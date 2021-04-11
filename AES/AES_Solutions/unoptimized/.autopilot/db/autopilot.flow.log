@@ -1,0 +1,954 @@
+INFO-FLOW: Workspace G:/AES/AES_Solutions/unoptimized opened at Sat Apr 10 22:34:56 +0530 2021
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq 
+Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.lib 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.lib 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.lib 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.lib 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.lib 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.lib 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.lib 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.lib 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.lib 
+Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute     source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq.gen 
+Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.103 sec.
+Command     ap_source done; 0.104 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute     source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xc7z020-clg484-1 
+Execute       ap_part_info -name xc7z020-clg484-1 -data single -quiet 
+Command       ap_part_info done; 0.383 sec.
+Execute       ap_part_info -name xc7z020-clg484-1 -data info 
+Execute       add_library xilinx/zynq/zynq:xc7z020:-clg484:-1 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7z020 
+Command         license_isbetapart done; error code: 1; 
+Execute         ap_part_info -data single -name xc7z020-clg484-1 
+Execute         ap_part_info -name xc7z020-clg484-1 -data resources 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info 
+Execute         config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info 
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+Execute       ap_part_info -name xc7z020-clg484-1 -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.468 sec.
+Execute     ap_part_info -data single -name xc7z020-clg484-1 
+Execute     ap_part_info -name xc7z020-clg484-1 -data resources 
+Execute     ap_part_info -name xc7z020-clg484-1 -data info 
+Execute     ap_part_info -name xc7z020-clg484-1 -data info 
+Execute     config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute     ap_part_info -name xc7z020-clg484-1 -data info 
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.624 sec.
+Execute   set_part xc7z020clg484-1 -tool vivado 
+Execute     ap_part_info -name xc7z020clg484-1 -data single -quiet 
+Execute     ap_part_info -name xc7z020clg484-1 -data info 
+Execute     add_library xilinx/zynq/zynq:xc7z020:-clg484:-1 
+Execute       get_default_platform 
+Execute       license_isbetapart xc7z020 
+Command       license_isbetapart done; error code: 1; 
+Execute       ap_part_info -data single -name xc7z020-clg484-1 
+Execute       ap_part_info -name xc7z020-clg484-1 -data resources 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info 
+Execute       config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info 
+Execute       config_chip_info -quiet -speed slow 
+Execute     add_library xilinx/zynq/zynq_fpv6 
+Execute       get_default_platform 
+Execute       open_platform DefaultPlatform 
+Execute       import_lib C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     ap_part_info -name xc7z020-clg484-1 -data info 
+Execute     get_default_platform 
+Execute   create_clock -period 10 -name default 
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute   csynth_design 
+Execute     get_config_compile -dump_cfg 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute       get_config_schedule -relax_ii_for_timing 
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+Execute       get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'aes/aes.c' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling aes/aes.c as C
+Execute       ap_part_info -name xc7z020-clg484-1 -data info 
+Execute       is_encrypted aes/aes.c 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2019.1/msys" -hls  -fno-exceptions  -D__llvm__  -E "aes/aes.c"   -DHW_COSIM  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  -o "G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes.pp.0.c" 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -fno-exceptions -D__llvm__ -E aes/aes.c -DHW_COSIM -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes.pp.0.c
+Command       clang done; 0.88 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes.pp.0.c std=gnu89 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes.pp.0.c  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2019.1/msys" -hls  -DHW_COSIM  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  "G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes.pp.0.c"  -o "G:/AES/AES_Solutions/unoptimized/.autopilot/db/useless.bc"  
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -DHW_COSIM -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes.pp.0.c -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/useless.bc
+Command       clang done; 0.88 sec.
+INFO-FLOW: Done: GCC PP time: 1.8 seconds per iteration
+Execute       source C:/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute       source C:/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute         source C:/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/try/try.tcl 
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes.pp.0.c std=gnu89 -directive=G:/AES/AES_Solutions/unoptimized/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=G:/AES/AES_Solutions/unoptimized/.autopilot/db/.systemc_flag -quiet -fix-errors G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes.pp.0.c std=gnu89 -directive=G:/AES/AES_Solutions/unoptimized/.autopilot/db/all.directive.json 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=G:/AES/AES_Solutions/unoptimized/.autopilot/db/all.directive.json -quiet -fix-errors G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=G:/AES/AES_Solutions/unoptimized/.autopilot/db/xilinx-dataflow-lawyer.aes.pp.0.c.diag.yml G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes.pp.0.c -- -std=gnu99 -fhls -ferror-limit=0 -fstrict-dataflow > G:/AES/AES_Solutions/unoptimized/.autopilot/db/xilinx-dataflow-lawyer.aes.pp.0.c.out.log 2> G:/AES/AES_Solutions/unoptimized/.autopilot/db/xilinx-dataflow-lawyer.aes.pp.0.c.err.log 
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes.pp.0.c std=gnu89 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=G:/AES/AES_Solutions/unoptimized/.autopilot/db/tidy-3.1.aes.pp.0.c.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > G:/AES/AES_Solutions/unoptimized/.autopilot/db/tidy-3.1.aes.pp.0.c.out.log 2> G:/AES/AES_Solutions/unoptimized/.autopilot/db/tidy-3.1.aes.pp.0.c.err.log 
+Execute         source C:/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Execute           source C:/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > G:/AES/AES_Solutions/unoptimized/.autopilot/db/xilinx-legacy-rewriter.aes.pp.0.c.out.log 2> G:/AES/AES_Solutions/unoptimized/.autopilot/db/xilinx-legacy-rewriter.aes.pp.0.c.err.log 
+Command       tidy_31 done; 0.218 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.4 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes.pragma.1.c std=gnu89 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes.pragma.1.c -- -std=gnu89 -fhls -ferror-limit=0
+Execute       ap_part_info -name xc7z020-clg484-1 -data info 
+INFO-FLOW: Processing labels
+Execute       clang -src G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes.pragma.2.c  -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes.pragma.2.c"  -DHW_COSIM  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes.bc" 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes.pragma.2.c -DHW_COSIM -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes.bc
+Command       clang done; 0.888 sec.
+INFO-FLOW: Linking Debug ...
+Execute       llvm-ld G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes.g.bc -hls-opt -except-internalize aes_main -LC:/Xilinx/Vivado/2019.1/win64/lib -lhlsm -lhlsmc++ -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/a.g 
+Command       llvm-ld done; 0.9 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 174.891 ; gain = 84.535
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 174.891 ; gain = 84.535
+Execute       get_config_sdx -target 
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer G:/AES/AES_Solutions/unoptimized/.autopilot/db/a.pp.bc -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/a.pp.0.bc -f 
+Execute         llvm-ld G:/AES/AES_Solutions/unoptimized/.autopilot/db/a.pp.0.bc -disable-opt -LC:/Xilinx/Vivado/2019.1/win64/lib -lfloatconversion -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/a.g.0 
+Command         llvm-ld done; 0.45 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top aes_main -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name G:/AES/AES_Solutions/unoptimized/.autopilot/db/a.g.0.bc -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/a.g.1.bc -f -phase std-opt 
+Command         transform done; 0.129 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 174.891 ; gain = 84.535
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin G:/AES/AES_Solutions/unoptimized/.autopilot/db/a.g.1.bc -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/a.g.2.prechk.bc -f 
+INFO: [XFORM 203-602] Inlining function 'SubByte' into 'KeySchedule' (aes/aes_key.c:144) automatically.
+Command         transform done; 0.334 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check G:/AES/AES_Solutions/unoptimized/.autopilot/db/a.g.2.prechk.bc -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 174.891 ; gain = 84.535
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy G:/AES/AES_Solutions/unoptimized/.autopilot/db/a.g.1.bc to G:/AES/AES_Solutions/unoptimized/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp G:/AES/AES_Solutions/unoptimized/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name G:/AES/AES_Solutions/unoptimized/.autopilot/db/a.o.1.bc -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-102] Automatically partitioning small array 'temp' (aes/aes_key.c:80) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'temp' (aes/aes_key.c:80) in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'SubByte' into 'KeySchedule' (aes/aes_key.c:144) automatically.
+Command         transform done; 0.511 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name G:/AES/AES_Solutions/unoptimized/.autopilot/db/a.o.1.tmp.bc -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (aes/aes_func.c:374:7) to (aes/aes_func.c:372:23) in function 'MixColumn_AddRoundKey'... converting 13 basic blocks.
+INFO: [XFORM 203-602] Inlining function 'encrypt' into 'aes_main' (aes/aes.c:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'decrypt' into 'aes_main' (aes/aes.c:118) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'MixColumn_AddRoundKey' (aes/aes_func.c:367)...16 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'AddRoundKey_InversMixColumn' (aes/aes_func.c:434)...6 expression(s) balanced.
+Command         transform done; 0.337 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 174.891 ; gain = 84.535
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -ptrLegalization -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build G:/AES/AES_Solutions/unoptimized/.autopilot/db/a.o.2.bc -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+WARNING: [XFORM 203-631] Renaming function 'MixColumn_AddRoundKey' to 'MixColumn_AddRoundKe' (aes/aes_func.c:369:23)
+WARNING: [XFORM 203-631] Renaming function 'InversShiftRow_ByteSub' to 'InversShiftRow_ByteS' (aes/aes_func.c:253:7)
+WARNING: [XFORM 203-631] Renaming function 'AddRoundKey_InversMixColumn' to 'AddRoundKey_InversMi' (aes/aes_func.c:436:23)
+Command         transform done; 1.393 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 210.836 ; gain = 120.480
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 3.197 sec.
+Command     elaborate done; 7.316 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'aes_main' ...
+Execute       ap_set_top_model aes_main 
+Execute       get_model_list aes_main -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model aes_main 
+Execute       preproc_iomode -model AddRoundKey_InversMi 
+Execute       preproc_iomode -model InversShiftRow_ByteS 
+Execute       preproc_iomode -model MixColumn_AddRoundKe 
+Execute       preproc_iomode -model ByteSub_ShiftRow 
+Execute       preproc_iomode -model AddRoundKey 
+Execute       preproc_iomode -model KeySchedule 
+Execute       get_model_list aes_main -filter all-wo-channel 
+INFO-FLOW: Model list for configure: KeySchedule AddRoundKey ByteSub_ShiftRow MixColumn_AddRoundKe InversShiftRow_ByteS AddRoundKey_InversMi aes_main
+INFO-FLOW: Configuring Module : KeySchedule ...
+Execute       set_default_model KeySchedule 
+Execute       apply_spec_resource_limit KeySchedule 
+INFO-FLOW: Configuring Module : AddRoundKey ...
+Execute       set_default_model AddRoundKey 
+Execute       apply_spec_resource_limit AddRoundKey 
+INFO-FLOW: Configuring Module : ByteSub_ShiftRow ...
+Execute       set_default_model ByteSub_ShiftRow 
+Execute       apply_spec_resource_limit ByteSub_ShiftRow 
+INFO-FLOW: Configuring Module : MixColumn_AddRoundKe ...
+Execute       set_default_model MixColumn_AddRoundKe 
+Execute       apply_spec_resource_limit MixColumn_AddRoundKe 
+INFO-FLOW: Configuring Module : InversShiftRow_ByteS ...
+Execute       set_default_model InversShiftRow_ByteS 
+Execute       apply_spec_resource_limit InversShiftRow_ByteS 
+INFO-FLOW: Configuring Module : AddRoundKey_InversMi ...
+Execute       set_default_model AddRoundKey_InversMi 
+Execute       apply_spec_resource_limit AddRoundKey_InversMi 
+INFO-FLOW: Configuring Module : aes_main ...
+Execute       set_default_model aes_main 
+Execute       apply_spec_resource_limit aes_main 
+INFO-FLOW: Model list for preprocess: KeySchedule AddRoundKey ByteSub_ShiftRow MixColumn_AddRoundKe InversShiftRow_ByteS AddRoundKey_InversMi aes_main
+INFO-FLOW: Preprocessing Module: KeySchedule ...
+Execute       set_default_model KeySchedule 
+Execute       cdfg_preprocess -model KeySchedule 
+Execute       rtl_gen_preprocess KeySchedule 
+INFO-FLOW: Preprocessing Module: AddRoundKey ...
+Execute       set_default_model AddRoundKey 
+Execute       cdfg_preprocess -model AddRoundKey 
+Execute       rtl_gen_preprocess AddRoundKey 
+INFO-FLOW: Preprocessing Module: ByteSub_ShiftRow ...
+Execute       set_default_model ByteSub_ShiftRow 
+Execute       cdfg_preprocess -model ByteSub_ShiftRow 
+Execute       rtl_gen_preprocess ByteSub_ShiftRow 
+INFO-FLOW: Preprocessing Module: MixColumn_AddRoundKe ...
+Execute       set_default_model MixColumn_AddRoundKe 
+Execute       cdfg_preprocess -model MixColumn_AddRoundKe 
+Execute       rtl_gen_preprocess MixColumn_AddRoundKe 
+INFO-FLOW: Preprocessing Module: InversShiftRow_ByteS ...
+Execute       set_default_model InversShiftRow_ByteS 
+Execute       cdfg_preprocess -model InversShiftRow_ByteS 
+Execute       rtl_gen_preprocess InversShiftRow_ByteS 
+INFO-FLOW: Preprocessing Module: AddRoundKey_InversMi ...
+Execute       set_default_model AddRoundKey_InversMi 
+Execute       cdfg_preprocess -model AddRoundKey_InversMi 
+Execute       rtl_gen_preprocess AddRoundKey_InversMi 
+INFO-FLOW: Preprocessing Module: aes_main ...
+Execute       set_default_model aes_main 
+Execute       cdfg_preprocess -model aes_main 
+Execute       rtl_gen_preprocess aes_main 
+INFO-FLOW: Model list for synthesis: KeySchedule AddRoundKey ByteSub_ShiftRow MixColumn_AddRoundKe InversShiftRow_ByteS AddRoundKey_InversMi aes_main
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'KeySchedule' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model KeySchedule 
+Execute       schedule -model KeySchedule 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 8.469 seconds; current allocated memory: 161.320 MB.
+Execute       syn_report -verbosereport -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/KeySchedule.verbose.sched.rpt 
+INFO: [HLS 200-434] Only 0 loops out of a total 4 loops have been pipelined in this design.
+Execute       db_write -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/KeySchedule.sched.adb -f 
+INFO-FLOW: Finish scheduling KeySchedule.
+Execute       set_default_model KeySchedule 
+Execute       bind -model KeySchedule 
+BIND OPTION: model=KeySchedule
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.144 seconds; current allocated memory: 162.017 MB.
+Execute       syn_report -verbosereport -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/KeySchedule.verbose.bind.rpt 
+Execute       db_write -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/KeySchedule.bind.adb -f 
+INFO-FLOW: Finish binding KeySchedule.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'AddRoundKey' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model AddRoundKey 
+Execute       schedule -model AddRoundKey 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 162.214 MB.
+Execute       syn_report -verbosereport -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/AddRoundKey.verbose.sched.rpt 
+Execute       db_write -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/AddRoundKey.sched.adb -f 
+INFO-FLOW: Finish scheduling AddRoundKey.
+Execute       set_default_model AddRoundKey 
+Execute       bind -model AddRoundKey 
+BIND OPTION: model=AddRoundKey
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 162.381 MB.
+Execute       syn_report -verbosereport -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/AddRoundKey.verbose.bind.rpt 
+Execute       db_write -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/AddRoundKey.bind.adb -f 
+INFO-FLOW: Finish binding AddRoundKey.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ByteSub_ShiftRow' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model ByteSub_ShiftRow 
+Execute       schedule -model ByteSub_ShiftRow 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.147 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.208 seconds; current allocated memory: 163.497 MB.
+Execute       syn_report -verbosereport -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/ByteSub_ShiftRow.verbose.sched.rpt 
+Command       syn_report done; 0.149 sec.
+Execute       db_write -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/ByteSub_ShiftRow.sched.adb -f 
+INFO-FLOW: Finish scheduling ByteSub_ShiftRow.
+Execute       set_default_model ByteSub_ShiftRow 
+Execute       bind -model ByteSub_ShiftRow 
+BIND OPTION: model=ByteSub_ShiftRow
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.314 seconds; current allocated memory: 164.843 MB.
+Execute       syn_report -verbosereport -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/ByteSub_ShiftRow.verbose.bind.rpt 
+Command       syn_report done; 0.178 sec.
+Execute       db_write -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/ByteSub_ShiftRow.bind.adb -f 
+Command       db_write done; 0.113 sec.
+INFO-FLOW: Finish binding ByteSub_ShiftRow.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'MixColumn_AddRoundKe' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model MixColumn_AddRoundKe 
+Execute       schedule -model MixColumn_AddRoundKe 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.365 seconds; current allocated memory: 165.315 MB.
+Execute       syn_report -verbosereport -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/MixColumn_AddRoundKe.verbose.sched.rpt 
+Execute       db_write -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/MixColumn_AddRoundKe.sched.adb -f 
+INFO-FLOW: Finish scheduling MixColumn_AddRoundKe.
+Execute       set_default_model MixColumn_AddRoundKe 
+Execute       bind -model MixColumn_AddRoundKe 
+BIND OPTION: model=MixColumn_AddRoundKe
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.113 seconds; current allocated memory: 165.769 MB.
+Execute       syn_report -verbosereport -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/MixColumn_AddRoundKe.verbose.bind.rpt 
+Execute       db_write -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/MixColumn_AddRoundKe.bind.adb -f 
+INFO-FLOW: Finish binding MixColumn_AddRoundKe.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'InversShiftRow_ByteS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model InversShiftRow_ByteS 
+Execute       schedule -model InversShiftRow_ByteS 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.149 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.266 seconds; current allocated memory: 166.931 MB.
+Execute       syn_report -verbosereport -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/InversShiftRow_ByteS.verbose.sched.rpt 
+Command       syn_report done; 0.149 sec.
+Execute       db_write -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/InversShiftRow_ByteS.sched.adb -f 
+INFO-FLOW: Finish scheduling InversShiftRow_ByteS.
+Execute       set_default_model InversShiftRow_ByteS 
+Execute       bind -model InversShiftRow_ByteS 
+BIND OPTION: model=InversShiftRow_ByteS
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.317 seconds; current allocated memory: 168.277 MB.
+Execute       syn_report -verbosereport -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/InversShiftRow_ByteS.verbose.bind.rpt 
+Command       syn_report done; 0.154 sec.
+Execute       db_write -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/InversShiftRow_ByteS.bind.adb -f 
+INFO-FLOW: Finish binding InversShiftRow_ByteS.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'AddRoundKey_InversMi' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model AddRoundKey_InversMi 
+Execute       schedule -model AddRoundKey_InversMi 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.339 seconds; current allocated memory: 168.743 MB.
+Execute       syn_report -verbosereport -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/AddRoundKey_InversMi.verbose.sched.rpt 
+Execute       db_write -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/AddRoundKey_InversMi.sched.adb -f 
+INFO-FLOW: Finish scheduling AddRoundKey_InversMi.
+Execute       set_default_model AddRoundKey_InversMi 
+Execute       bind -model AddRoundKey_InversMi 
+BIND OPTION: model=AddRoundKey_InversMi
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.138 seconds; current allocated memory: 169.418 MB.
+Execute       syn_report -verbosereport -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/AddRoundKey_InversMi.verbose.bind.rpt 
+Execute       db_write -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/AddRoundKey_InversMi.bind.adb -f 
+INFO-FLOW: Finish binding AddRoundKey_InversMi.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes_main' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model aes_main 
+Execute       schedule -model aes_main 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.208 seconds; current allocated memory: 169.794 MB.
+Execute       syn_report -verbosereport -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes_main.verbose.sched.rpt 
+Execute       db_write -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes_main.sched.adb -f 
+INFO-FLOW: Finish scheduling aes_main.
+Execute       set_default_model aes_main 
+Execute       bind -model aes_main 
+BIND OPTION: model=aes_main
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.281 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.355 seconds; current allocated memory: 170.408 MB.
+Execute       syn_report -verbosereport -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes_main.verbose.bind.rpt 
+Command       syn_report done; 0.191 sec.
+Execute       db_write -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes_main.bind.adb -f 
+INFO-FLOW: Finish binding aes_main.
+Execute       get_model_list aes_main -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess KeySchedule 
+Execute       rtl_gen_preprocess AddRoundKey 
+Execute       rtl_gen_preprocess ByteSub_ShiftRow 
+Execute       rtl_gen_preprocess MixColumn_AddRoundKe 
+Execute       rtl_gen_preprocess InversShiftRow_ByteS 
+Execute       rtl_gen_preprocess AddRoundKey_InversMi 
+Execute       rtl_gen_preprocess aes_main 
+INFO-FLOW: Model list for RTL generation: KeySchedule AddRoundKey ByteSub_ShiftRow MixColumn_AddRoundKe InversShiftRow_ByteS AddRoundKey_InversMi aes_main
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'KeySchedule' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model KeySchedule -vendor xilinx -mg_file G:/AES/AES_Solutions/unoptimized/.autopilot/db/KeySchedule.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'aes_main_mux_42_32_1_1' to 'aes_main_mux_42_3bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'aes_main_mux_42_3bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'KeySchedule'.
+INFO: [HLS 200-111]  Elapsed time: 0.291 seconds; current allocated memory: 171.594 MB.
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes_main.rtl_wrap.cfg.tcl 
+Execute       gen_rtl KeySchedule -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o G:/AES/AES_Solutions/unoptimized/syn/systemc/KeySchedule -synmodules KeySchedule AddRoundKey ByteSub_ShiftRow MixColumn_AddRoundKe InversShiftRow_ByteS AddRoundKey_InversMi aes_main 
+Execute       gen_rtl KeySchedule -style xilinx -f -lang vhdl -o G:/AES/AES_Solutions/unoptimized/syn/vhdl/KeySchedule 
+Execute       gen_rtl KeySchedule -style xilinx -f -lang vlog -o G:/AES/AES_Solutions/unoptimized/syn/verilog/KeySchedule 
+Execute       syn_report -csynth -model KeySchedule -o G:/AES/AES_Solutions/unoptimized/syn/report/KeySchedule_csynth.rpt 
+Execute       syn_report -rtlxml -model KeySchedule -o G:/AES/AES_Solutions/unoptimized/syn/report/KeySchedule_csynth.xml 
+Execute       syn_report -verbosereport -model KeySchedule -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/KeySchedule.verbose.rpt 
+Execute       db_write -model KeySchedule -f -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/KeySchedule.adb 
+Execute       gen_tb_info KeySchedule -p G:/AES/AES_Solutions/unoptimized/.autopilot/db -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/KeySchedule 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'AddRoundKey' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model AddRoundKey -vendor xilinx -mg_file G:/AES/AES_Solutions/unoptimized/.autopilot/db/AddRoundKey.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'AddRoundKey'.
+INFO: [HLS 200-111]  Elapsed time: 0.297 seconds; current allocated memory: 172.178 MB.
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes_main.rtl_wrap.cfg.tcl 
+Execute       gen_rtl AddRoundKey -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o G:/AES/AES_Solutions/unoptimized/syn/systemc/AddRoundKey -synmodules KeySchedule AddRoundKey ByteSub_ShiftRow MixColumn_AddRoundKe InversShiftRow_ByteS AddRoundKey_InversMi aes_main 
+Execute       gen_rtl AddRoundKey -style xilinx -f -lang vhdl -o G:/AES/AES_Solutions/unoptimized/syn/vhdl/AddRoundKey 
+Execute       gen_rtl AddRoundKey -style xilinx -f -lang vlog -o G:/AES/AES_Solutions/unoptimized/syn/verilog/AddRoundKey 
+Execute       syn_report -csynth -model AddRoundKey -o G:/AES/AES_Solutions/unoptimized/syn/report/AddRoundKey_csynth.rpt 
+Execute       syn_report -rtlxml -model AddRoundKey -o G:/AES/AES_Solutions/unoptimized/syn/report/AddRoundKey_csynth.xml 
+Execute       syn_report -verbosereport -model AddRoundKey -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/AddRoundKey.verbose.rpt 
+Execute       db_write -model AddRoundKey -f -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/AddRoundKey.adb 
+Execute       gen_tb_info AddRoundKey -p G:/AES/AES_Solutions/unoptimized/.autopilot/db -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/AddRoundKey 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ByteSub_ShiftRow' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model ByteSub_ShiftRow -vendor xilinx -mg_file G:/AES/AES_Solutions/unoptimized/.autopilot/db/ByteSub_ShiftRow.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'ByteSub_ShiftRow_Sbox' to 'ByteSub_ShiftRow_cud' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ByteSub_ShiftRow'.
+INFO: [HLS 200-111]  Elapsed time: 0.206 seconds; current allocated memory: 174.271 MB.
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes_main.rtl_wrap.cfg.tcl 
+Execute       gen_rtl ByteSub_ShiftRow -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o G:/AES/AES_Solutions/unoptimized/syn/systemc/ByteSub_ShiftRow -synmodules KeySchedule AddRoundKey ByteSub_ShiftRow MixColumn_AddRoundKe InversShiftRow_ByteS AddRoundKey_InversMi aes_main 
+Execute       gen_rtl ByteSub_ShiftRow -style xilinx -f -lang vhdl -o G:/AES/AES_Solutions/unoptimized/syn/vhdl/ByteSub_ShiftRow 
+Execute       gen_rtl ByteSub_ShiftRow -style xilinx -f -lang vlog -o G:/AES/AES_Solutions/unoptimized/syn/verilog/ByteSub_ShiftRow 
+Execute       syn_report -csynth -model ByteSub_ShiftRow -o G:/AES/AES_Solutions/unoptimized/syn/report/ByteSub_ShiftRow_csynth.rpt 
+Execute       syn_report -rtlxml -model ByteSub_ShiftRow -o G:/AES/AES_Solutions/unoptimized/syn/report/ByteSub_ShiftRow_csynth.xml 
+Execute       syn_report -verbosereport -model ByteSub_ShiftRow -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/ByteSub_ShiftRow.verbose.rpt 
+Command       syn_report done; 0.183 sec.
+Execute       db_write -model ByteSub_ShiftRow -f -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/ByteSub_ShiftRow.adb 
+Command       db_write done; 0.129 sec.
+Execute       gen_tb_info ByteSub_ShiftRow -p G:/AES/AES_Solutions/unoptimized/.autopilot/db -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/ByteSub_ShiftRow 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'MixColumn_AddRoundKe' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model MixColumn_AddRoundKe -vendor xilinx -mg_file G:/AES/AES_Solutions/unoptimized/.autopilot/db/MixColumn_AddRoundKe.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'MixColumn_AddRoundKe_ret' to 'MixColumn_AddRoundEe' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'MixColumn_AddRoundKe'.
+INFO: [HLS 200-111]  Elapsed time: 0.522 seconds; current allocated memory: 175.215 MB.
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes_main.rtl_wrap.cfg.tcl 
+Execute       gen_rtl MixColumn_AddRoundKe -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o G:/AES/AES_Solutions/unoptimized/syn/systemc/MixColumn_AddRoundKe -synmodules KeySchedule AddRoundKey ByteSub_ShiftRow MixColumn_AddRoundKe InversShiftRow_ByteS AddRoundKey_InversMi aes_main 
+Execute       gen_rtl MixColumn_AddRoundKe -style xilinx -f -lang vhdl -o G:/AES/AES_Solutions/unoptimized/syn/vhdl/MixColumn_AddRoundKe 
+Execute       gen_rtl MixColumn_AddRoundKe -style xilinx -f -lang vlog -o G:/AES/AES_Solutions/unoptimized/syn/verilog/MixColumn_AddRoundKe 
+Execute       syn_report -csynth -model MixColumn_AddRoundKe -o G:/AES/AES_Solutions/unoptimized/syn/report/MixColumn_AddRoundKe_csynth.rpt 
+Execute       syn_report -rtlxml -model MixColumn_AddRoundKe -o G:/AES/AES_Solutions/unoptimized/syn/report/MixColumn_AddRoundKe_csynth.xml 
+Execute       syn_report -verbosereport -model MixColumn_AddRoundKe -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/MixColumn_AddRoundKe.verbose.rpt 
+Execute       db_write -model MixColumn_AddRoundKe -f -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/MixColumn_AddRoundKe.adb 
+Execute       gen_tb_info MixColumn_AddRoundKe -p G:/AES/AES_Solutions/unoptimized/.autopilot/db -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/MixColumn_AddRoundKe 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'InversShiftRow_ByteS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model InversShiftRow_ByteS -vendor xilinx -mg_file G:/AES/AES_Solutions/unoptimized/.autopilot/db/InversShiftRow_ByteS.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'InversShiftRow_ByteS_invSbox' to 'InversShiftRow_ByeOg' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'InversShiftRow_ByteS'.
+INFO: [HLS 200-111]  Elapsed time: 0.354 seconds; current allocated memory: 177.450 MB.
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes_main.rtl_wrap.cfg.tcl 
+Execute       gen_rtl InversShiftRow_ByteS -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o G:/AES/AES_Solutions/unoptimized/syn/systemc/InversShiftRow_ByteS -synmodules KeySchedule AddRoundKey ByteSub_ShiftRow MixColumn_AddRoundKe InversShiftRow_ByteS AddRoundKey_InversMi aes_main 
+Execute       gen_rtl InversShiftRow_ByteS -style xilinx -f -lang vhdl -o G:/AES/AES_Solutions/unoptimized/syn/vhdl/InversShiftRow_ByteS 
+Execute       gen_rtl InversShiftRow_ByteS -style xilinx -f -lang vlog -o G:/AES/AES_Solutions/unoptimized/syn/verilog/InversShiftRow_ByteS 
+Execute       syn_report -csynth -model InversShiftRow_ByteS -o G:/AES/AES_Solutions/unoptimized/syn/report/InversShiftRow_ByteS_csynth.rpt 
+Execute       syn_report -rtlxml -model InversShiftRow_ByteS -o G:/AES/AES_Solutions/unoptimized/syn/report/InversShiftRow_ByteS_csynth.xml 
+Execute       syn_report -verbosereport -model InversShiftRow_ByteS -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/InversShiftRow_ByteS.verbose.rpt 
+Command       syn_report done; 0.155 sec.
+Execute       db_write -model InversShiftRow_ByteS -f -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/InversShiftRow_ByteS.adb 
+Command       db_write done; 0.138 sec.
+Execute       gen_tb_info InversShiftRow_ByteS -p G:/AES/AES_Solutions/unoptimized/.autopilot/db -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/InversShiftRow_ByteS 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'AddRoundKey_InversMi' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model AddRoundKey_InversMi -vendor xilinx -mg_file G:/AES/AES_Solutions/unoptimized/.autopilot/db/AddRoundKey_InversMi.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'AddRoundKey_InversMi_ret' to 'AddRoundKey_InverfYi' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'AddRoundKey_InversMi'.
+INFO: [HLS 200-111]  Elapsed time: 0.519 seconds; current allocated memory: 178.763 MB.
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes_main.rtl_wrap.cfg.tcl 
+Execute       gen_rtl AddRoundKey_InversMi -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o G:/AES/AES_Solutions/unoptimized/syn/systemc/AddRoundKey_InversMi -synmodules KeySchedule AddRoundKey ByteSub_ShiftRow MixColumn_AddRoundKe InversShiftRow_ByteS AddRoundKey_InversMi aes_main 
+Execute       gen_rtl AddRoundKey_InversMi -style xilinx -f -lang vhdl -o G:/AES/AES_Solutions/unoptimized/syn/vhdl/AddRoundKey_InversMi 
+Execute       gen_rtl AddRoundKey_InversMi -style xilinx -f -lang vlog -o G:/AES/AES_Solutions/unoptimized/syn/verilog/AddRoundKey_InversMi 
+Execute       syn_report -csynth -model AddRoundKey_InversMi -o G:/AES/AES_Solutions/unoptimized/syn/report/AddRoundKey_InversMi_csynth.rpt 
+Execute       syn_report -rtlxml -model AddRoundKey_InversMi -o G:/AES/AES_Solutions/unoptimized/syn/report/AddRoundKey_InversMi_csynth.xml 
+Execute       syn_report -verbosereport -model AddRoundKey_InversMi -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/AddRoundKey_InversMi.verbose.rpt 
+Command       syn_report done; 0.104 sec.
+Execute       db_write -model AddRoundKey_InversMi -f -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/AddRoundKey_InversMi.adb 
+Command       db_write done; 0.112 sec.
+Execute       gen_tb_info AddRoundKey_InversMi -p G:/AES/AES_Solutions/unoptimized/.autopilot/db -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/AddRoundKey_InversMi 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes_main' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model aes_main -vendor xilinx -mg_file G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes_main.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on function 'aes_main' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Global array 'key' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Register 'round_val' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'nb' is power-on initialization.
+WARNING: [RTGEN 206-101] Global scalar 'nb' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'statemt' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'aes_main_out_enc_statemt' to 'aes_main_out_enc_g8j' due to the length limit 20
+WARNING: [RTGEN 206-101] Register 'main_result' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'aes_main_out_dec_statemt' to 'aes_main_out_dec_hbi' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes_main'.
+INFO: [HLS 200-111]  Elapsed time: 0.476 seconds; current allocated memory: 180.249 MB.
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes_main.rtl_wrap.cfg.tcl 
+Execute       gen_rtl aes_main -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o G:/AES/AES_Solutions/unoptimized/syn/systemc/aes_main -synmodules KeySchedule AddRoundKey ByteSub_ShiftRow MixColumn_AddRoundKe InversShiftRow_ByteS AddRoundKey_InversMi aes_main 
+Execute       gen_rtl aes_main -istop -style xilinx -f -lang vhdl -o G:/AES/AES_Solutions/unoptimized/syn/vhdl/aes_main 
+Execute       gen_rtl aes_main -istop -style xilinx -f -lang vlog -o G:/AES/AES_Solutions/unoptimized/syn/verilog/aes_main 
+Execute       syn_report -csynth -model aes_main -o G:/AES/AES_Solutions/unoptimized/syn/report/aes_main_csynth.rpt 
+Execute       syn_report -rtlxml -model aes_main -o G:/AES/AES_Solutions/unoptimized/syn/report/aes_main_csynth.xml 
+Execute       syn_report -verbosereport -model aes_main -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes_main.verbose.rpt 
+Command       syn_report done; 0.2 sec.
+Execute       db_write -model aes_main -f -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes_main.adb 
+Execute       gen_tb_info aes_main -p G:/AES/AES_Solutions/unoptimized/.autopilot/db -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes_main 
+Execute       export_constraint_db -f -tool general -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes_main.constraint.tcl 
+Execute       syn_report -designview -model aes_main -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes_main.design.xml 
+Command       syn_report done; 0.121 sec.
+Execute       get_config_rtl -disable_wave_debug 
+Execute       syn_report -wcfg -model aes_main -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes_main_dataflow_ana.wcfg 
+Execute       syn_report -protoinst -model aes_main -o G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes_main.protoinst 
+Execute       get_config_debug -directory 
+Execute       sc_get_clocks aes_main 
+Execute       get_config_export -vivado_clock 
+Execute       sc_get_portdomain aes_main 
+INFO-FLOW: Model list for RTL component generation: KeySchedule AddRoundKey ByteSub_ShiftRow MixColumn_AddRoundKe InversShiftRow_ByteS AddRoundKey_InversMi aes_main
+INFO-FLOW: Handling components in module [KeySchedule] ... 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/KeySchedule.compgen.tcl 
+INFO-FLOW: Found component aes_main_mux_42_3bkb.
+INFO-FLOW: Append model aes_main_mux_42_3bkb
+INFO-FLOW: Found component KeySchedule_Sbox.
+INFO-FLOW: Append model KeySchedule_Sbox
+INFO-FLOW: Found component KeySchedule_Rcon0.
+INFO-FLOW: Append model KeySchedule_Rcon0
+INFO-FLOW: Handling components in module [AddRoundKey] ... 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/AddRoundKey.compgen.tcl 
+INFO-FLOW: Handling components in module [ByteSub_ShiftRow] ... 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/ByteSub_ShiftRow.compgen.tcl 
+INFO-FLOW: Found component ByteSub_ShiftRow_cud.
+INFO-FLOW: Append model ByteSub_ShiftRow_cud
+INFO-FLOW: Handling components in module [MixColumn_AddRoundKe] ... 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/MixColumn_AddRoundKe.compgen.tcl 
+INFO-FLOW: Found component MixColumn_AddRoundEe.
+INFO-FLOW: Append model MixColumn_AddRoundEe
+INFO-FLOW: Handling components in module [InversShiftRow_ByteS] ... 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/InversShiftRow_ByteS.compgen.tcl 
+INFO-FLOW: Found component InversShiftRow_ByeOg.
+INFO-FLOW: Append model InversShiftRow_ByeOg
+INFO-FLOW: Handling components in module [AddRoundKey_InversMi] ... 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/AddRoundKey_InversMi.compgen.tcl 
+INFO-FLOW: Found component AddRoundKey_InverfYi.
+INFO-FLOW: Append model AddRoundKey_InverfYi
+INFO-FLOW: Handling components in module [aes_main] ... 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes_main.compgen.tcl 
+INFO-FLOW: Found component aes_main_word.
+INFO-FLOW: Append model aes_main_word
+INFO-FLOW: Found component aes_main_key.
+INFO-FLOW: Append model aes_main_key
+INFO-FLOW: Found component aes_main_statemt.
+INFO-FLOW: Append model aes_main_statemt
+INFO-FLOW: Found component aes_main_out_enc_g8j.
+INFO-FLOW: Append model aes_main_out_enc_g8j
+INFO-FLOW: Found component aes_main_out_dec_hbi.
+INFO-FLOW: Append model aes_main_out_dec_hbi
+INFO-FLOW: Append model KeySchedule
+INFO-FLOW: Append model AddRoundKey
+INFO-FLOW: Append model ByteSub_ShiftRow
+INFO-FLOW: Append model MixColumn_AddRoundKe
+INFO-FLOW: Append model InversShiftRow_ByteS
+INFO-FLOW: Append model AddRoundKey_InversMi
+INFO-FLOW: Append model aes_main
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: aes_main_mux_42_3bkb KeySchedule_Sbox KeySchedule_Rcon0 ByteSub_ShiftRow_cud MixColumn_AddRoundEe InversShiftRow_ByeOg AddRoundKey_InverfYi aes_main_word aes_main_key aes_main_statemt aes_main_out_enc_g8j aes_main_out_dec_hbi KeySchedule AddRoundKey ByteSub_ShiftRow MixColumn_AddRoundKe InversShiftRow_ByteS AddRoundKey_InversMi aes_main
+INFO-FLOW: To file: write model aes_main_mux_42_3bkb
+INFO-FLOW: To file: write model KeySchedule_Sbox
+INFO-FLOW: To file: write model KeySchedule_Rcon0
+INFO-FLOW: To file: write model ByteSub_ShiftRow_cud
+INFO-FLOW: To file: write model MixColumn_AddRoundEe
+INFO-FLOW: To file: write model InversShiftRow_ByeOg
+INFO-FLOW: To file: write model AddRoundKey_InverfYi
+INFO-FLOW: To file: write model aes_main_word
+INFO-FLOW: To file: write model aes_main_key
+INFO-FLOW: To file: write model aes_main_statemt
+INFO-FLOW: To file: write model aes_main_out_enc_g8j
+INFO-FLOW: To file: write model aes_main_out_dec_hbi
+INFO-FLOW: To file: write model KeySchedule
+INFO-FLOW: To file: write model AddRoundKey
+INFO-FLOW: To file: write model ByteSub_ShiftRow
+INFO-FLOW: To file: write model MixColumn_AddRoundKe
+INFO-FLOW: To file: write model InversShiftRow_ByteS
+INFO-FLOW: To file: write model AddRoundKey_InversMi
+INFO-FLOW: To file: write model aes_main
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:CMD: auto_generate_csynth_design
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d G:/AES/AES_Solutions/unoptimized
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib G:/AES/AES_Solutions/unoptimized/.autopilot/db/global.setting.tcl
+Execute       source C:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/common.gen 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source C:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/op.gen 
+Execute       source C:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source C:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/interface.gen 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/global.setting.tcl 
+Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq.gen 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/global.setting.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/global.setting.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/KeySchedule.compgen.tcl 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'KeySchedule_Sbox_rom' using block ROMs.
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'KeySchedule_Rcon0_rom' using distributed ROMs.
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/AddRoundKey.compgen.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/ByteSub_ShiftRow.compgen.tcl 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'ByteSub_ShiftRow_cud_rom' using auto ROMs.
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/MixColumn_AddRoundKe.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'MixColumn_AddRoundEe_ram (RAM)' using block RAMs.
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/InversShiftRow_ByteS.compgen.tcl 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'InversShiftRow_ByeOg_rom' using auto ROMs.
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/AddRoundKey_InversMi.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'AddRoundKey_InverfYi_ram (RAM)' using block RAMs.
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes_main.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'aes_main_word_ram (RAM)' using block RAMs with power-on initialization.
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'aes_main_key_ram (RAM)' using block RAMs with power-on initialization.
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'aes_main_statemt_ram (RAM)' using block RAMs with power-on initialization.
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'aes_main_out_enc_g8j_rom' using distributed ROMs.
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'aes_main_out_dec_hbi_rom' using distributed ROMs.
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d G:/AES/AES_Solutions/unoptimized
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib G:/AES/AES_Solutions/unoptimized/.autopilot/db/global.setting.tcl
+Execute       source C:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/common.gen 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source C:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/op.gen 
+Execute       source C:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source C:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/interface.gen 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/global.setting.tcl 
+Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq.gen 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=aes_main xml_exists=0
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes_main.rtl_wrap.cfg.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes_main.rtl_wrap.cfg.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes_main.rtl_wrap.cfg.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes_main.tbgen.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes_main.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/global.setting.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/KeySchedule.compgen.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/AddRoundKey.compgen.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/ByteSub_ShiftRow.compgen.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/MixColumn_AddRoundKe.compgen.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/InversShiftRow_ByteS.compgen.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/AddRoundKey_InversMi.compgen.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes_main.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/global.setting.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/KeySchedule.compgen.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/AddRoundKey.compgen.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/ByteSub_ShiftRow.compgen.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/MixColumn_AddRoundKe.compgen.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/InversShiftRow_ByteS.compgen.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/AddRoundKey_InversMi.compgen.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes_main.compgen.tcl 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute       ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/global.setting.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/KeySchedule.compgen.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/AddRoundKey.compgen.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/ByteSub_ShiftRow.compgen.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/MixColumn_AddRoundKe.compgen.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/InversShiftRow_ByteS.compgen.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/AddRoundKey_InversMi.compgen.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes_main.compgen.tcl 
+Execute       ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute       ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes_main.constraint.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes_main.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=4
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=1
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=19 #gSsdmPorts=4
+Execute       source C:/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/fileutil/fileutil.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/global.setting.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/global.setting.tcl 
+Execute       get_config_export -xo 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes_main.tbgen.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes_main.tbgen.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes_main.tbgen.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes_main.rtl_wrap.cfg.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes_main.compgen.dataonly.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes_main.constraint.tcl 
+Execute       sc_get_clocks aes_main 
+Execute       ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/global.setting.tcl 
+Execute       get_config_debug -directory 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/KeySchedule.tbgen.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/AddRoundKey.tbgen.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/ByteSub_ShiftRow.tbgen.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/MixColumn_AddRoundKe.tbgen.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/InversShiftRow_ByteS.tbgen.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/AddRoundKey_InversMi.tbgen.tcl 
+Execute       source G:/AES/AES_Solutions/unoptimized/.autopilot/db/aes_main.tbgen.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -profile 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -stall_sig_gen 
+Execute       get_config_rtl -profile 
+INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist, skipping opencl info: G:/AES/AES_Solutions/unoptimized/.autopilot/db/kernel.internal.xml
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 263.781 ; gain = 173.426
+INFO: [VHDL 208-304] Generating VHDL RTL for aes_main.
+INFO: [VLOG 209-307] Generating Verilog RTL for aes_main.
+Command     autosyn done; 7.377 sec.
+Command   csynth_design done; 14.7 sec.
+Command ap_source done; 15.412 sec.
+Execute cleanup_all 
